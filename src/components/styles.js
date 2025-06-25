@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 2rem 1.5rem 4rem;
-  background: linear-gradient(135deg, #fff0f6, #ffe6f0);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  background: linear-gradient(135deg, #fff0f6, #ffe6f0);
   font-family: 'Poppins', sans-serif;
   color: #6b2446;
+  padding: 2rem 1.5rem 0;
+`;
+
+export const Content = styled.main`
+  flex: 1; /* Faz o conteúdo crescer e empurra o footer para baixo */
 `;
 
 export const Title = styled.h1`
@@ -34,10 +40,7 @@ export const GenreButton = styled.button`
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: 
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.25s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
 
   &:hover {
     background: #ff8da1;
@@ -108,5 +111,70 @@ export const Btn = styled.button`
     background: linear-gradient(135deg, #d6336c, #ff8da1);
     transform: scale(1.1);
     box-shadow: 0 7px 18px rgba(214, 51, 108, 0.7);
+  }
+`;
+
+export const HeaderContainer = styled.header`
+  background: linear-gradient(90deg, #a0003b, #d6336c);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+`;
+
+export const Logo = styled.h1`
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  gap: 1.5rem;
+`;
+
+export const NavLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #ffdce6;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #ffdce6;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;
+
+export const FooterContainer = styled.footer`
+  width: 100%;
+  background-color: #fff;  /* fundo branco */
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: auto;
+
+  p {
+    margin: 0;
+    color: #d6336c;
+    font-weight: 600;
   }
 `;

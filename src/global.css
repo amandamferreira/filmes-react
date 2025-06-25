@@ -2,16 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: black;
-  color: white;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  background-color: #121212;
+  color: #fff;
 }
 
-::-webkit-scrollbar {
-  display: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }

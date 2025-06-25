@@ -18,13 +18,10 @@ const Movie = () => {
   const KEY = process.env.REACT_APP_KEY;
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=pt-BR`
-    )
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=pt-BR`)
       .then((response) => response.json())
       .then((data) => {
-        const filme = data.results.find((item) => item.id === Number(id));
-        setMovie(filme);
+        setMovie(data);
       });
   }, [KEY, id]);
 
@@ -41,7 +38,7 @@ const Movie = () => {
   return (
     <>
       <Nav>
-        <h1>Movie</h1>
+        <h1>Detalhes do Filme</h1>
       </Nav>
       <Container>
         <ImgMovie src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
