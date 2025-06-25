@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
-  Nav,
   Container,
   ImgMovie,
   Title,
   ReleaseDate,
   Descricao,
   BtnBack,
+  Info,
 } from "./styles";
 
 const Movie = () => {
@@ -28,20 +28,17 @@ const Movie = () => {
   if (!movie) {
     return (
       <Container>
-        <Nav>
-          <h1>Carregando...</h1>
-        </Nav>
+        <h2 style={{textAlign: "center", color: "#d6336c", fontWeight: "700"}}>
+          Carregando...
+        </h2>
       </Container>
     );
   }
 
   return (
-    <>
-      <Nav>
-        <h1>Detalhes do Filme</h1>
-      </Nav>
-      <Container>
-        <ImgMovie src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
+    <Container>
+      <ImgMovie src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
+      <Info>
         <Title>{movie.title}</Title>
         <ReleaseDate>Data de lançamento: {movie.release_date}</ReleaseDate>
         <Descricao>
@@ -51,8 +48,8 @@ const Movie = () => {
         <Link to="/">
           <BtnBack>Voltar</BtnBack>
         </Link>
-      </Container>
-    </>
+      </Info>
+    </Container>
   );
 };
 

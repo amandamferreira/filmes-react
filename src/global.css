@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: #121212;
-  color: #fff;
+  background: linear-gradient(135deg, #fff0f6, #ffe6f0);
+  color: #6b2446; /* cor do texto escura para contraste */
+  min-height: 100vh;
 }
 
 a {
