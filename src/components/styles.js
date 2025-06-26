@@ -7,11 +7,11 @@ export const Container = styled.div`
   background: linear-gradient(135deg, #fff0f6, #ffe6f0);
   font-family: 'Poppins', sans-serif;
   color: #6b2446;
-  padding: 2rem 1.5rem 0;
+  padding: 6rem 1.5rem 0; /* espaço extra no topo p/ header fixa */
 `;
 
 export const Content = styled.main`
-  flex: 1; /* Faz o conteúdo crescer e empurra o footer para baixo */
+  flex: 1;
 `;
 
 export const Title = styled.h1`
@@ -115,6 +115,10 @@ export const Btn = styled.button`
 `;
 
 export const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background: linear-gradient(90deg, #a0003b, #d6336c);
   padding: 1rem 2rem;
   display: flex;
@@ -124,9 +128,9 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.h1`
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0;
 `;
 
@@ -165,7 +169,7 @@ export const NavLink = styled.a`
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  background-color: #fff;  /* fundo branco */
+  background-color: #fff;
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.9rem;
@@ -178,3 +182,4 @@ export const FooterContainer = styled.footer`
     font-weight: 600;
   }
 `;
+

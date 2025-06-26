@@ -1,9 +1,24 @@
 import styled from "styled-components";
 
+export const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px; /* altura fixa da header */
+  background: linear-gradient(90deg, #a0003b, #d6336c);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+`;
+
 export const Container = styled.div`
   max-width: 900px;
   margin: 3rem auto 4rem;
   padding: 2rem;
+  padding-top: 90px; /* espaço para header fixa */
   background: linear-gradient(135deg, #fff0f6, #ffe6f0);
   border-radius: 1.8rem;
   box-shadow: 0 15px 40px rgba(214, 51, 108, 0.25);
@@ -17,6 +32,7 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 1.5rem 1rem;
+    padding-top: 90px; /* manter no mobile também */
     margin: 2rem 1rem 3rem;
   }
 `;
